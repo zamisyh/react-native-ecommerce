@@ -2,9 +2,10 @@ import React from 'react';
 import { Text, View, TouchableOpacity, StyleSheet } from 'react-native';
 import Ic from 'react-native-vector-icons/MaterialIcons';
 import { colors } from '../../../utils';
+import TextOnly from './TextOnly';
 
 
-const CartButton = ({ icon, cartTotal, padding}) => {
+const CartButton = (props) => {
 
 	const Icon = () => {
 		if(icon === "cart"){
@@ -13,6 +14,14 @@ const CartButton = ({ icon, cartTotal, padding}) => {
 
 		return <Ic name="shopping-cart" size={30} color="#000000" />
 	}
+
+	const { icon, cartTotal, padding, type, title } = props;
+
+	if (type === "text") {
+		return <TextOnly  {...props} />
+	}
+
+
 
 	return(
 		<TouchableOpacity style={styles.container}>

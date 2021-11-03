@@ -1,4 +1,4 @@
-import React from 'react';
+  import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import TabItem from './TabItem';
 
@@ -58,9 +58,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#22668A',
     paddingVertical: 8,
     paddingHorizontal: 34,
-    marginBottom: 30,
-    marginHorizontal: 30,
-    borderRadius: 10,
     shadowOffset: {
       width: 0,
       height: 2,
